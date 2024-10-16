@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@400;700;900&display=swap');
+
+:root {
+  /*Família da fonte*/
+  --font-padrao: "Inter", sans-serif;
+  /*Tamanho da fonte*/
+  --font-size-padrao: 16px;
+  --font-size-p: 1rem;
+  /*Cor borda*/
+  --border-color: #252525;
+  /*Cor fonte*/
+  --rosa: #f52273;
+  /*Backgrounds*/
+  --bg-claro: #fff;
+  --bg-cinza-claro: #f3f3f3;
+  /*Espaçamentos*/
+  --padding: 2rem;
+  --padding-top-buttom: 2rem 0;
+  --padding-section: 8rem 0;
+  --row-gap: 1rem;
+  --gap-cards: 4rem;
+}
+
+* {
+  font-family: var(--font-padrao);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body {
+  font-size: var(--font-size-padrao);
+}
+
+/*Header*/
+.header {
+  text-align: center;
+  padding: var(--padding-top-buttom);
+  background-color: var(--bg-claro);
+  font-size: var(--font-size-p);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--row-gap);
+}
+
+/*Professores*/
+.professores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-cinza-claro);
+  padding: var(--padding-section);
+  gap: var(--gap-cards);
+}
+
+.professor-box {
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.professor__title {
+  margin-top: 1rem;
+}
+
+.professor__descricao {
+  line-height: 1.4rem;
+}
+
+.professor__valor {
+  color: var(--rosa);
+}
+
+.professor__img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.professor__calc {
+  background-color: var(--rosa);
+  padding: 1rem 0;
+  border-radius: 50px;
+  color: var(--bg-claro);
+  font-weight: 600;
+  margin-top: 1rem;
+  border: 1px solid var(--rosa);
+  transition: all ease-in-out .3s;
+}
+
+.professor__calc:hover {
+  background-color: transparent;
+  color: var(--rosa);
+}
+
+/*Footer*/
+.footer {
+  background-color: var(--rosa);
+  color: var(--bg-claro);
+  text-align: center;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__link {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  color: inherit;
+}
+
+/*Responsivo*/
+@media screen and (width < 930px) {
+  .professores {
+    padding: 4rem 2rem;
+  }
+}
+
+
+@media screen and (width < 600px) {
+  .professores {
+    flex-direction: column;
+  }
+}
+
+@media screen and (width < 440px) {
+  .professores {
+    padding: 3rem 1rem;
+  }
+
+  .professor-box {
+    padding: 1rem;
+  }
+
+  .professor__title {
+   font-size: 1.5rem;
+  }
+
+  .professor__descricao {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+
+  .professor__valor {
+    font-size: 0.8rem;
+  }
+
+  .professor__calc {
+    font-size: 0.8rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
